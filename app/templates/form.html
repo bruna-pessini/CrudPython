@@ -15,6 +15,7 @@
     </div>
 
      <div class="col-8 m-auto pt-4 pb-2 text-center">
+         <div id="result"></div>
         <form name="form" id="form" action="{% if db %}/update/{{db.id}}/{%else%}/create/{% endif %}" method="post">
         {% csrf_token %}
         <!--{{form.as_p}} exibir em paragrafo-->
@@ -24,6 +25,8 @@
         <input type="submit" class="btn bnt success" value="Salvar">
         </form>
     </div>
+     {% load static %}
+     <script src="{% static 'javascript.js' %}"></script>
 
 </body>
 </html>
